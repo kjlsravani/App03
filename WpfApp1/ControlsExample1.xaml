@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfApp1.ControlsExample1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="ControlsExample1" Height="300" Width="800">
+    <Grid>
+        <ListBox ToolTip="Select a Color" x:Name="listBox" HorizontalAlignment="Left" Height="100" Margin="29,28,0,0" VerticalAlignment="Top" Width="100">
+            <ListBoxItem Content="Red"></ListBoxItem>
+            <ListBoxItem Content="Blue"></ListBoxItem>
+            <ListBoxItem Content="Yellow"></ListBoxItem>
+        </ListBox>
+
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="100" Margin="165,28,0,0" VerticalAlignment="Top" Width="100">
+            <ListBox.Items>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="MyIcon.PNG"></Image>
+                    <TextBlock Text="Red"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="MyIcon.PNG"></Image>
+                    <TextBlock Text="Green"></TextBlock>
+                </StackPanel>
+            </ListBox.Items>
+        </ListBox>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="87,160,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.Items>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="MyIcon.PNG"></Image>
+                    <TextBlock Text="Red"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="MyIcon.PNG"></Image>
+                    <TextBlock Text="Green"></TextBlock>
+                </StackPanel>
+            </ComboBox.Items>
+
+            <ComboBox.ToolTip>
+                <StackPanel>
+                    <Image Source="MyIcon.PNG"></Image>
+                    <TextBox Text="Please Select A Color"></TextBox>
+                </StackPanel>
+            </ComboBox.ToolTip>
+        </ComboBox>
+        <Button x:Name="button" HorizontalAlignment="Left" Margin="283,48,0,0" VerticalAlignment="Top" Width="261" Height="50">
+            <DockPanel>
+                <CheckBox DockPanel.Dock="Left"></CheckBox>
+                <TextBlock Text="Temporary If Checked" DockPanel.Dock="Right" FontSize="14"></TextBlock>
+            </DockPanel>
+        </Button>
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="301,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,1.654"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp3.MVVM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MVVM" Height="376.596" Width="353.191">
+    <Grid>
+        <TextBox x:Name="textBox" 
+                 Text="{Binding ElementName=lst, Path=SelectedItem.Price}"
+                 HorizontalAlignment="Left" Height="32" 
+                 Margin="10,26,0,0" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="117"/>
+        
+        <TextBox x:Name="textBox1" 
+                 Text="{Binding ElementName=lst, Path=SelectedItem.Title}" 
+                 HorizontalAlignment="Left" Height="30" 
+                 Margin="10,93,0,0" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="117"/>
+        
+        <ListBox x:Name="lst"
+                 ItemsSource="{Binding Path=Products}"
+                 DisplayMemberPath="Title"
+                 HorizontalAlignment="Left" 
+                 Height="111" Margin="10,184,0,0"
+                 VerticalAlignment="Top" Width="117"/>
+
+        <ListBox x:Name="lst1"
+                 ItemsSource="{Binding Path=ProductStores}"
+                 HorizontalAlignment="Left" Height="69" 
+                 Margin="151,209,0,0" 
+                 VerticalAlignment="Top" Width="73" SelectionChanged="Lst1_SelectionChanged"/>
+        
+        <Image x:Name="image"
+               Source="{Binding Path=StoreImage}"
+               HorizontalAlignment="Left" Height="120" Margin="181,37,0,0" VerticalAlignment="Top" Width="112"/>
+
+    </Grid>
+</Window>

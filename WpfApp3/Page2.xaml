@@ -1,0 +1,17 @@
+﻿<Page x:Class="WpfApp3.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d"
+      Title="Page2" Height="311.17" Width="306.915">
+
+    <Canvas Margin="0,0,10,10">
+        <TextBlock FontSize="30" Canvas.Left="61" Canvas.Top="35">This is Page2</TextBlock>
+        <TextBlock Canvas.Left="61" Canvas.Top="107">
+            <Hyperlink NavigateUri="Page1.xaml">Go To Page1</Hyperlink>
+        </TextBlock>
+        <Button x:Name="button" Content="Go To Page1" Height="51" Canvas.Left="46" Canvas.Top="163" Width="145" Click="Button_Click"/>
+    </Canvas>
+</Page>

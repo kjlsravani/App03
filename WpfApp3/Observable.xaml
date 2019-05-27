@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApp3.Observable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="Observable" Height="462.766" Width="638.829">
+    <Grid Name="Grid1">
+        <ListBox x:Name="lstProducts"  HorizontalAlignment="Left" Height="202" Margin="27,36,0,0" VerticalAlignment="Top" Width="166"/>
+        
+        <Button x:Name="button" Content="Add New" HorizontalAlignment="Left" Height="46" Margin="235,91,0,0" VerticalAlignment="Top" Width="79" Click="Button_Click"/>
+        
+        <Label x:Name="label" Content="{Binding Path=Price}" HorizontalAlignment="Left" Height="46" Margin="235,192,0,0" VerticalAlignment="Top" Width="79"/>
+        
+        <Label x:Name="label1" Content="{Binding Path=Title}" HorizontalAlignment="Left" Height="40" Margin="235,308,0,0" VerticalAlignment="Top" Width="79"/>
+        
+        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="67" Margin="400,200,0,0" VerticalAlignment="Top" Width="122" Click="Button1_Click"/>
+
+    </Grid>
+</Window>
